@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply bg-light text-dark;
+  }
+  
+  :root.dark {
+    @apply bg-dark text-light;
+  }
+
+  html {
+    @apply transition-colors duration-300;
+  }
+}
+
+#colorSwitch img {
+  @apply transition-transform duration-300;
+}
+
+.dark #colorSwitch img {
+  transform: rotate(360deg);
+}
