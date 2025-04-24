@@ -1,12 +1,48 @@
 ---
 // import Welcome from "../components/Welcome.astro";
+
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import Button from "../components/Button.astro";
+
+import { Image } from "astro:assets";
+// import devguy from "../components/images/developer-guy.png";
+import ralf from "../components/images/zyro-image.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Welcome to Astro.">
-  <h1 class="text-6xl">Startseite</h1>
+<Layout title="Startseite" description="Willkommen auf meiner Webseite">
+  <div class="flex flex-row justify-between items-center">
+    <div class="w-1/2 flex justify-center items-center py-10">
+      <Image
+        src={ralf}
+        width={1200}
+        height={1100}
+        quality={80}
+        format="webp"
+        alt="Der Ralf"
+      />
+    </div>
+    <div class="w-1/2 flex flex-col justify-between items-start">
+      <div class="text-6xl mb-4">
+        Visionen mit<br />
+        Code und <span class="text-blue-700 dark:text-green-400">Design</span
+        ><br />
+        zum Leben erwecken
+      </div>
+      <div class="mb-6 leading-relaxed">
+        Ich bin Ralf Vogel, ein leidenschaftlicher Softwareentwickler mit über
+        35 Jahren Erfahrung in der Entwicklung von Webanwendungen. Ich habe
+        umfangreiche Kenntnisse in verschiedenen Programmiersprachen und
+        Technologien, darunter JavaScript, TypeScript, PHP, HTML, CSS und viele
+        mehr.
+      </div>
+      <div class="flex items-center">
+        <Button url="https://ravo-it.de" title="Geschäft" external={true} />
+      </div>
+    </div>
+   
+  </div>
 </Layout>
