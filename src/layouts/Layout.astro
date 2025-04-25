@@ -3,7 +3,7 @@ import NavigationLinks from "../components/NavigationLinks.astro";
 import NavigationSocialBar from "../components/NavigationSocialBar.astro";
 import "../styles/global.css";
 
-const { title, description} = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,22 +11,9 @@ const { title, description} = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-	<meta name="description" content={description} />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <script>
-      // Dark mode initialization
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-        return 'light';
-      })();
-      if (theme === 'dark') document.documentElement.classList.add('dark');
-    </script>
   </head>
   <body class="font-mono bg-light dark:bg-dark text-dark dark:text-light">
     <main class="container mx-auto min-h-screen px-4">
