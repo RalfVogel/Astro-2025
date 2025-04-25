@@ -2,46 +2,54 @@
 import NavigationSocialIcon from "./NavigationSocialIcon.astro";
 ---
 
-<div class="flex items-center gap-x-5">
-  <NavigationSocialIcon
-    icon='ph:facebook-logo-fill'
-    url='https://www.facebook.com/ralf.vogel.7'
-    title='Facebook'
-  />
-  <NavigationSocialIcon
-    icon='ph:x-logo-fill'
-    url='https://x.com/RalfRheinberg'
-    title='X'
-  />
-  <NavigationSocialIcon
-    icon='logos:linkedin-icon'
-    url='https://www.linkedin.com/in/ralf-vogel-a6b437108/'
-    title='Linkedin'
-  />
-  <NavigationSocialIcon
-    icon='mdi:github'
-    url='https://github.com/RalfVogel'
-    title='GitHub'
-  />
-  <NavigationSocialIcon
-    icon='mdi:alternate-email'
-    url='mailto:ralf@ravo-it.de'
-    title='Email'
-    target='_self'
-  />
-  <NavigationSocialIcon
-    icon='ph:coffee-fill'
-    url='https://paypal.me/RalfVogel1964?country.x=DE&locale.x=de_DE'
-    title='Gib mir einen Kaffee aus'
-    css='text-amber-800 dark:text-amber-500'
-  />
-  <button
+<!-- <div class="flex items-center gap-x-5"> -->
+<NavigationSocialIcon
+  icon="ph:facebook-logo-fill"
+  url="https://www.facebook.com/ralf.vogel.7"
+  title="Facebook"
+/>
+<NavigationSocialIcon
+  icon="ph:x-logo-fill"
+  url="https://x.com/RalfRheinberg"
+  title="X"
+/>
+<NavigationSocialIcon
+  icon="logos:linkedin-icon"
+  url="https://www.linkedin.com/in/ralf-vogel-a6b437108/"
+  title="Linkedin"
+/>
+<NavigationSocialIcon
+  icon="mdi:github"
+  url="https://github.com/RalfVogel"
+  title="GitHub"
+/>
+<NavigationSocialIcon
+  icon="mdi:alternate-email"
+  url="mailto:ralf@ravo-it.de"
+  title="Email"
+  target="_self"
+/>
+<NavigationSocialIcon
+  icon="ph:coffee-fill"
+  url="https://paypal.me/RalfVogel1964?country.x=DE&locale.x=de_DE"
+  title="Gib mir einen Kaffee aus"
+  css="text-amber-800 dark:text-amber-500"
+/>
+
+<div
+  id="colorSwitch"
+  class="hover:cursor-pointer bg-dark dark:bg-light rounded-full p-1"
+>
+  <img src="/icons/moon.svg" alt="moon" class="w-6 h-6" />
+</div>
+
+<!-- <button
     id="colorSwitch"
     class="p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700"
     title="Dark Mode"
     aria-label="Theme Toggle"
   >
     <img src="/icons/moon.svg" alt="moon" class="w-7 h-7" />
-  </button>
-</div>
+  </button> -->
 
+<!-- </div> -->
